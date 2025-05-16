@@ -1,0 +1,129 @@
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color: var(--dark-cyan);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  background-image: url('./images/bg-pattern-top.svg'), url('./images/bg-pattern-bottom.svg');
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.card-container {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  height: 140px;
+  overflow: hidden;
+}
+
+.card-pattern {
+  width: 100%;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px 25px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.profile-img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-top: -48px;
+}
+
+.name-age {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 18px;
+  color: var(--very-dark-blue);
+  margin-right: 10px;
+}
+
+.age {
+  color: var(--dark-grayish-blue);
+  font-weight: 400;
+}
+
+.location {
+  color: var(--dark-grayish-blue);
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 25px 30px;
+  text-align: center;
+}
+
+.stat-number {
+  color: var(--very-dark-blue);
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  color: var(--dark-gray);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 80%);
+}
+
+@media (max-width: 375px) {
+  .card-container {
+    max-width: 330px;
+  }
+  
+  .stats {
+    padding: 20px;
+  }
+}
